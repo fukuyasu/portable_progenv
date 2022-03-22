@@ -1,0 +1,9 @@
+@echo off
+
+echo __TITLE__
+echo Command-Line ver.__VERSION__
+echo.
+
+for %%B in (clinit-*.bat) do call %%B
+
+cd __WORK_DIR__

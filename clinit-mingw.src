@@ -1,0 +1,3 @@
+if exist "%~dp0__MINGW_DIR__\bin" set PATH=%~dp0__MINGW_DIR__\bin;%PATH%
+
+gcc --version
