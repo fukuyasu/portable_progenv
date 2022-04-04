@@ -1,0 +1,10 @@
+if defined CLASSPATH set CLASSPATH=
+
+if not exist "%~dp0__JAVA_DIR__\bin\" GOTO end
+
+set JAVA_HOME=%~dp0__JAVA_DIR__
+set Path=%JAVA_HOME%\bin;%PATH%
+java -version
+echo.
+
+:end

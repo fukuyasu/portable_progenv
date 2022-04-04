@@ -61,7 +61,7 @@ SHELL    = /bin/sh
 
 ########################################################################
 
-all: cl mingw
+all: cl mingw java
 
 zip-all: all
 	${7Z} a ${RELEASE_ZIP} ${BASE_DIR}
