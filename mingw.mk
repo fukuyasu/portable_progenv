@@ -2,19 +2,16 @@
 # ProGENv-mingw: Portable Programming Environment - MinGW-w64
 #
 
-# ProGENv-mingw ver. num.
-PG_MINGW_VERSION = 8.1.0
-
 ########################################################################
 
 #
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
-#       +- mingw64 : ${MINGW}
+#       +- mingw64 : ${MINGW_DIR}
 #       +- clinit-01-mingw.bat
 #
 
-MINGW = mingw64
+MINGW_DIR = mingw64
 
 CLINIT_MINGW_SRC = clinit-mingw.src
 CLINIT_MINGW_BAT = clinit-mingw.bat
@@ -33,7 +30,7 @@ MINGW_ZIP = ${DIST_DIR}/x86_64-${MINGW_VERSION}-release-${MINGW_THREADS}-${MINGW
 
 mingw: ${BASE_DIR}/${CLINIT_MINGW_BAT}
 
-${BASE_DIR}/${MINGW}/bin/gcc.exe:
+${BASE_DIR}/${MINGW_DIR}/bin/gcc.exe:
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR} 
 	${7Z} x ${MINGW_ZIP} -o${BASE_DIR}
 
@@ -51,4 +48,4 @@ clean::
 	${RM} ${BASE_DIR}/${CLINIT_MINGW_BAT}
 
 clean::
-	${RM} -R ${BASE_DIR}/${MINGW}
+	${RM} -R ${BASE_DIR}/${MINGW_DIR}
