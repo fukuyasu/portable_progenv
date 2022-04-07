@@ -8,13 +8,13 @@
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
 #       +- mingw64 : ${MINGW_DIR}
-#       +- clinit-01-mingw.bat
+#       +- clinit-10-mingw.bat
 #
 
 MINGW_DIR = mingw64
 
-CLINIT_MINGW_SRC = clinit-mingw.src
-CLINIT_MINGW_BAT = clinit-mingw.bat
+CLINIT_MINGW_SRC = clinit-10-mingw.src
+CLINIT_MINGW_BAT = clinit-10-mingw.bat
 
 ########################################################################
 
@@ -35,11 +35,11 @@ ${BASE_DIR}/${MINGW_DIR}/bin/gcc.exe:
 	${7Z} x ${MINGW_ZIP} -o${BASE_DIR}
 
 ${BASE_DIR}/${CLINIT_MINGW_BAT}: ${CLINIT_MINGW_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${MINGW}/bin/gcc.exe 
+	${MAKE} ${MAKE_FLAGS} cl
+	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${MINGW_DIR}/bin/gcc.exe 
 	${RM} ${BASE_DIR}/${CLINIT_MINGW_BAT}
 	${CAT} ${CLINIT_MINGW_SRC} \
-	    | ${SED} -e 's|__MINGW_DIR__|${MINGW}|g' \
+	    | ${SED} -e 's|__MINGW_DIR__|${MINGW_DIR}|g' \
 	    > ${BASE_DIR}/${CLINIT_MINGW_BAT}
 
 ########################################################################

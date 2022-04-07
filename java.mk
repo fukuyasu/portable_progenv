@@ -9,13 +9,13 @@
 #   ${BASE_DIR}
 #       +- java : ${JAVA_DIR}
 #       |    +-- 11 : ${JAVA_MAJOR}
-#       +- clinit-02-java.bat
+#       +- clinit-20-java.bat
 #
 
 JAVA_DIR = java
 
-CLINIT_JAVA_SRC = clinit-java.src
-CLINIT_JAVA_BAT = clinit-java.bat
+CLINIT_JAVA_SRC = clinit-20-java.src
+CLINIT_JAVA_BAT = clinit-20-java.bat
 
 ########################################################################
 
@@ -40,7 +40,7 @@ ${BASE_DIR}/${JAVA_DIR}/${JAVA_MAJOR}/bin/javac.exe:
 	${MV} ${BASE_DIR}/${JAVA_DIR}/jdk${JAVA_VERSION}  ${BASE_DIR}/${JAVA_DIR}/${JAVA_MAJOR}
 
 ${BASE_DIR}/${CLINIT_JAVA_BAT}: ${CLINIT_JAVA_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
+	${MAKE} ${MAKE_FLAGS} cl
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${JAVA_DIR}/${JAVA_MAJOR}/bin/javac.exe 
 	${RM} ${BASE_DIR}/${CLINIT_JAVA_BAT}
 	${CAT} ${CLINIT_JAVA_SRC} \

@@ -77,7 +77,6 @@ ${BASE_DIR}/${WORK_DIR}:
 	${MKDIR} ${BASE_DIR}/${WORK_DIR}
 
 ${BASE_DIR}/${CLINIT_BAT}: ${CLINIT_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${WORK_DIR}
 	${RM} ${BASE_DIR}/${CLINIT_BAT}
 	${CAT} ${CLINIT_SRC} \
@@ -87,8 +86,8 @@ ${BASE_DIR}/${CLINIT_BAT}: ${CLINIT_SRC}
 	    > ${BASE_DIR}/${CLINIT_BAT}
 
 ${BASE_DIR}/${CL_LNK}: ${CL_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${CLINIT_BAT}
+	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${CP} ${CL_SRC} ${BASE_DIR}
 
 ########################################################################
