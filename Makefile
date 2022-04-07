@@ -7,10 +7,10 @@ PROJECT = progenv
 # Project Title
 TITLE   = ProGENv: Portable Programming Environment
 # Project ver. num.
-VERSION = 1.0
+VERSION = 4.0
 
 # Command-Line ver. num.
-CL_VERSION = 1.0
+CL_VERSION = 2.0
 
 ########################################################################
 
@@ -63,8 +63,24 @@ SHELL    = /bin/sh
 
 all: cl mingw java
 
-zip-all: all
+progenv-zip-all:
+	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
+	${MAKE} ${MAKE_FLAGS} clean progenv-mingw-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java
+	${MAKE} ${MAKE_FLAGS} progenv-zip
+
+########################################################################
+
+zip: ${BASE_DIR}
 	${7Z} a ${RELEASE_ZIP} ${BASE_DIR}
+
+progenv-zip: all zip
+
+progenv-mingw-zip: mingw
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-mingw" zip
+
+progenv-java-zip: java
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-java" zip
 
 ########################################################################
 
