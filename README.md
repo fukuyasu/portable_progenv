@@ -48,7 +48,7 @@ $ make progenv-zip-all
 ```
 progenv
    +-- mingw64 （MinGW-w64を展開したディレクトリ）
-   +-- java/11 （JDKを展開したディレクトリ）
+   +-- java/${JAVA_MAJOR} （JDKを展開したディレクトリ）
    +-- work    （CLI環境のホームディレクトリ）
    +-- progenv command-line.lnk （cmd.exeへのショートカット）
    +-- clinit.bat          （cmd.exeの環境を初期化するスクリプト）
