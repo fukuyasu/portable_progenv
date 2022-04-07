@@ -8,7 +8,7 @@
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
 #       +- java : ${JAVA_DIR}
-#       |    +-- 11 : ${JAVA_MAJOR}
+#       |    +-- 17 : ${JAVA_MAJOR}
 #       +- clinit-20-java.bat
 #
 
@@ -19,16 +19,16 @@ CLINIT_JAVA_BAT = clinit-20-java.bat
 
 ########################################################################
 
-JAVA_MAJOR = 11
-JAVA_MINOR = ${JAVA11_MINOR}
-JAVA_PATCH = ${JAVA11_PATCH}
-JAVA_VERSION = ${JAVA11_VERSION}
-JAVA_ZIP = ${JAVA11_ZIP}
+JAVA_MAJOR = 17
+JAVA_MINOR = ${JAVA17_MINOR}
+JAVA_PATCH = ${JAVA17_PATCH}
+JAVA_VERSION = ${JAVA17_VERSION}
+JAVA_ZIP = ${JAVA17_ZIP}
 
-JAVA11_MINOR = 0.14.1
-JAVA11_PATCH = 1
-JAVA11_VERSION = -11.${JAVA11_MINOR}+${JAVA11_PATCH}
-JAVA11_ZIP = ${DIST_DIR}/OpenJDK11U-jdk_x64_windows_hotspot_11.${JAVA11_MINOR}_${JAVA11_PATCH}.zip
+JAVA17_MINOR = 0.2
+JAVA17_PATCH = 8
+JAVA17_VERSION = -17.${JAVA17_MINOR}+${JAVA17_PATCH}
+JAVA17_ZIP = ${DIST_DIR}/OpenJDK17U-jdk_x64_windows_hotspot_17.${JAVA17_MINOR}_${JAVA17_PATCH}.zip
 
 ########################################################################
 
