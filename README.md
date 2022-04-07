@@ -5,8 +5,8 @@ GCC
 - MinGW-w64: https://sourceforge.net/projects/mingw-w64/files/
 
 JDK
-- AdoptOpenJDK: https://adoptopenjdk.net/
 - Adoptium OpenJDK: https://adoptium.net/
+- AdoptOpenJDK: https://adoptopenjdk.net/ (has moved to adoptium.net)
 
 ## バージョン番号
 X.YpZ
