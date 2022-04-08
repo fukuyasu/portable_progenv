@@ -31,6 +31,8 @@ CL_LNK = ${CL_SRC}
 CLINIT_SRC = clinit.src
 CLINIT_BAT = clinit.bat
 
+WIN_PATH_SEP = \\
+
 ########################################################################
 
 RELEASE_DIR = ../release

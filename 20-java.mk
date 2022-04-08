@@ -44,7 +44,7 @@ ${BASE_DIR}/${CLINIT_JAVA_BAT}: ${CLINIT_JAVA_SRC}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${JAVA_DIR}/${JAVA_MAJOR}/bin/javac.exe 
 	${RM} ${BASE_DIR}/${CLINIT_JAVA_BAT}
 	${CAT} ${CLINIT_JAVA_SRC} \
-	    | ${SED} -e 's|__JAVA_DIR__|${JAVA_DIR}/${JAVA_MAJOR}|g' \
+	    | ${SED} -e 's|__JAVA_DIR__|${JAVA_DIR}${WIN_PATH_SEP}${JAVA_MAJOR}|g' \
 	    > ${BASE_DIR}/${CLINIT_JAVA_BAT}
 
 ########################################################################
