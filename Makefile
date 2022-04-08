@@ -7,10 +7,10 @@ PROJECT = progenv
 # Project Title
 TITLE   = ProGENv: Portable Programming Environment
 # Project ver. num.
-VERSION = 1.0
+VERSION = 4.0
 
 # Command-Line ver. num.
-CL_VERSION = 1.0
+CL_VERSION = 2.0
 
 ########################################################################
 
@@ -30,6 +30,8 @@ CL_LNK = ${CL_SRC}
 
 CLINIT_SRC = clinit.src
 CLINIT_BAT = clinit.bat
+
+WIN_PATH_SEP = \\
 
 ########################################################################
 
@@ -63,8 +65,24 @@ SHELL    = /bin/sh
 
 all: cl mingw java
 
-zip-all: all
+progenv-zip-all:
+	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
+	${MAKE} ${MAKE_FLAGS} clean progenv-mingw-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java
+	${MAKE} ${MAKE_FLAGS} progenv-zip
+
+########################################################################
+
+zip: ${BASE_DIR}
 	${7Z} a ${RELEASE_ZIP} ${BASE_DIR}
+
+progenv-zip: all zip
+
+progenv-mingw-zip: mingw
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-mingw" zip
+
+progenv-java-zip: java
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-java" zip
 
 ########################################################################
 
@@ -77,7 +95,6 @@ ${BASE_DIR}/${WORK_DIR}:
 	${MKDIR} ${BASE_DIR}/${WORK_DIR}
 
 ${BASE_DIR}/${CLINIT_BAT}: ${CLINIT_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${WORK_DIR}
 	${RM} ${BASE_DIR}/${CLINIT_BAT}
 	${CAT} ${CLINIT_SRC} \
@@ -87,8 +104,8 @@ ${BASE_DIR}/${CLINIT_BAT}: ${CLINIT_SRC}
 	    > ${BASE_DIR}/${CLINIT_BAT}
 
 ${BASE_DIR}/${CL_LNK}: ${CL_SRC}
-	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}/${CLINIT_BAT}
+	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${CP} ${CL_SRC} ${BASE_DIR}
 
 ########################################################################
