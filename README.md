@@ -15,9 +15,9 @@ X.YpZ
 - Z: パッチレベル（上記以外の更新）
 
 リリース
-| バージョン | リリース日 | GCC | JDK |
-|:----|:-----------|:------|:---------|
-| 4.0 | 2022/04/08 | 8.1.0 | 17.0.2_8 |
+| バージョン | リリース日 | GCC | JDK | Eclipse | Pleiades |
+|:----|:-----------|:------|:---------|:----------|:-----------|
+| 4.0 | 2022/04/12 | 8.1.0 | 17.0.2_8 | 2022-03 R | 2022.03.26 |
 
 ## ディレクトリ構成
 ```
@@ -26,10 +26,15 @@ portable_progenv/
    +-- ##-xxxxx.mk         （Makefileから読み込まれるサブ環境構築ルール）
    +-- clinit.src          （clinit.batのソース，CLI環境の初期化）
    +-- clinit-##-xxxxx.src （clinit.batから読み込まれるスクリプトのソース）
+   +-- eclipseconf.sh      （Eclipse用設定スクリプト）
    +-- progenv command-line.lnk  （CLI環境へのリンク）
    +-- progenv/            （環境出力用ディレクトリ）
+   +-- tmp/                （作業用ディレクトリ）
 distfiles/    （ダウンロードファイル - 構築ルールから使用）
    +-- x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
+   +-- OpenJDK17U-jdk_x64_windows_hotspot_17.0.2_8.zip
+   +-- eclipse-java-2022-03-R-win32-x86_64.zip
+   +-- pleiades-win-2022.03.26.zip
 release/
    +-- progenv-X.YpZ.yyyymmdd.zip
    +-- progenv-X.YpZ-xxxxx.yyyymmdd.zip
@@ -47,9 +52,11 @@ $ make progenv-zip-all
 ## 展開後のディレクトリ構成
 ```
 progenv
-   +-- mingw64 （MinGW-w64を展開したディレクトリ）
+   +-- mingw64   （MinGW-w64を展開したディレクトリ）
    +-- java/${JAVA_MAJOR} （JDKを展開したディレクトリ）
-   +-- work    （CLI環境のホームディレクトリ）
+   +-- eclipse   （Eclipse+Pleiadesを展開したディレクトリ）
+   +-- work      （CLI環境のホームディレクトリ）
+   +-- workspace （Eclipse用ワークスペース）
    +-- progenv command-line.lnk （cmd.exeへのショートカット）
    +-- clinit.bat          （cmd.exeの環境を初期化するスクリプト）
    +-- clinit-10-mingw.bat （clinit.batから読み込まれるスクリプト，MinGW-w64のPath設定）

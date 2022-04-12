@@ -20,6 +20,9 @@ CL_VERSION = 2.0
 #       +- work : ${WORK_DIR} 
 #       +- progenv command-line.lnk
 #       +- clinit.bat
+#   tmp : ${TMP_DIR}
+#   ../distfiles : ${DIST_DIR}
+#   ../release : ${RELEASE_DIR}
 #
 
 BASE_DIR = progenv
@@ -32,6 +35,8 @@ CLINIT_SRC = clinit.src
 CLINIT_BAT = clinit.bat
 
 WIN_PATH_SEP = \\
+
+TMP_DIR = tmp
 
 ########################################################################
 
@@ -63,10 +68,12 @@ SHELL    = /bin/sh
 
 ########################################################################
 
-all: cl mingw java
+all: cl mingw java eclipse pleiades
 
 progenv-zip-all:
 	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# pleiades = java + eclipse + pleiades
+	${MAKE} ${MAKE_FLAGS} progenv-pleiades-zip
 	${MAKE} ${MAKE_FLAGS} clean progenv-mingw-zip
 	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java
 	${MAKE} ${MAKE_FLAGS} progenv-zip
@@ -83,6 +90,9 @@ progenv-mingw-zip: mingw
 
 progenv-java-zip: java
 	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-java" zip
+
+progenv-pleiades-zip: pleiades
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-pleiades" zip
 
 ########################################################################
 
@@ -108,6 +118,9 @@ ${BASE_DIR}/${CL_LNK}: ${CL_SRC}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${CP} ${CL_SRC} ${BASE_DIR}
 
+${TMP_DIR}:
+	${MKDIR} ${TMP_DIR}
+
 ########################################################################
 
 include *.mk
@@ -121,3 +134,6 @@ clean::
 clean::
 	${RM} -R ${BASE_DIR}/${WORK_DIR}
 	${RM} -R ${BASE_DIR}
+
+clean::
+	${RM} -R ${TMP_DIR}
