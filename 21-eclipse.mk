@@ -14,6 +14,7 @@
 #
 
 ECLIPSE_DIR = eclipse
+ECLIPSE_WORKSPACE = workspace
 
 ########################################################################
 
