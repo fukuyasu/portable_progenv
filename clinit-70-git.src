@@ -1,0 +1,3 @@
+if exist "%~dp0__GIT_DIR__\cmd" set PATH=%~dp0__GIT_DIR__\cmd;%PATH%
+
+git --version

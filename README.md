@@ -8,16 +8,24 @@ JDK
 - Adoptium OpenJDK: https://adoptium.net/
 - AdoptOpenJDK: https://adoptopenjdk.net/ (has moved to adoptium.net)
 
+Eclipse/Pleiades
+- Eclipse: https://www.eclipse.org/downloads/packages/
+- Pleiades: https://mergedoc.osdn.jp/
+
+Git for Windows
+- Git: https://git-scm.com/
+- Git for Windows: https://github.com/git-for-windows/git/releases/
+
 ## バージョン番号
 X.YpZ
 - X: メジャーバージョン（ディレクトリ構成の変更，CLI環境の設定変更など）
-- Y: マイナーバージョン（GCCのメジャーバージョンの変更）
+- Y: マイナーバージョン（GCC/JDKのメジャーバージョンの変更）
 - Z: パッチレベル（上記以外の更新）
 
 リリース
-| バージョン | リリース日 | GCC | JDK | Eclipse | Pleiades |
-|:----|:-----------|:------|:---------|:----------|:-----------|
-| 4.0 | 2022/04/12 | 8.1.0 | 17.0.2_8 | 2022-03 R | 2022.03.26 |
+| バージョン | リリース日 | GCC | JDK | Eclipse | Pleiades | Git for Windows |
+|:----|:-----------|:------|:---------|:----------|:-----------|:---------|
+| 4.0 | 2022/04/12 | 8.1.0 | 17.0.2_8 | 2022-03 R | 2022.03.26 | 2.35.1.2 |
 
 ## ディレクトリ構成
 ```
@@ -35,6 +43,7 @@ distfiles/    （ダウンロードファイル - 構築ルールから使用）
    +-- OpenJDK17U-jdk_x64_windows_hotspot_17.0.2_8.zip
    +-- eclipse-java-2022-03-R-win32-x86_64.zip
    +-- pleiades-win-2022.03.26.zip
+   +-- MinGit-2.35.1.2-busybox-64-bit.zip
 release/
    +-- progenv-X.YpZ.yyyymmdd.zip
    +-- progenv-X.YpZ-xxxxx.yyyymmdd.zip
@@ -55,10 +64,12 @@ progenv
    +-- mingw64   （MinGW-w64を展開したディレクトリ）
    +-- java/${JAVA_MAJOR} （JDKを展開したディレクトリ）
    +-- eclipse   （Eclipse+Pleiadesを展開したディレクトリ）
+   +-- MinGit    （MinGitを展開したディレクトリ）
    +-- work      （CLI環境のホームディレクトリ）
    +-- workspace （Eclipse用ワークスペース）
    +-- progenv command-line.lnk （cmd.exeへのショートカット）
    +-- clinit.bat          （cmd.exeの環境を初期化するスクリプト）
    +-- clinit-10-mingw.bat （clinit.batから読み込まれるスクリプト，MinGW-w64のPath設定）
    +-- clinit-20-java.bat  （clinit.batから読み込まれるスクリプト，JDKのPath設定）
+   +-- clinit-70-git.bat   （clinit.batから読み込まれるスクリプト，MinGitのPath設定）
 ```

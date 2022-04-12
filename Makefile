@@ -68,14 +68,19 @@ SHELL    = /bin/sh
 
 ########################################################################
 
-all: cl mingw java eclipse pleiades
+all: cl mingw java eclipse pleiades git
 
 progenv-zip-all:
-	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
-	# ${MAKE} ${MAKE_FLAGS} clean	# pleiades = java + eclipse + pleiades
-	${MAKE} ${MAKE_FLAGS} progenv-pleiades-zip
 	${MAKE} ${MAKE_FLAGS} clean progenv-mingw-zip
-	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java
+	# ${MAKE} ${MAKE_FLAGS} clean	# mingw-git = mingw + git
+	${MAKE} ${MAKE_FLAGS} progenv-mingw-git-zip
+	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# java-git = java + git
+	${MAKE} ${MAKE_FLAGS} progenv-java-git-zip
+	${MAKE} ${MAKE_FLAGS} clean progenv-pleiades-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# pleiades-git = java + pleiades + git
+	${MAKE} ${MAKE_FLAGS} progenv-pleiades-git-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java + pleiades + git
 	${MAKE} ${MAKE_FLAGS} progenv-zip
 
 ########################################################################
@@ -93,6 +98,18 @@ progenv-java-zip: java
 
 progenv-pleiades-zip: pleiades
 	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-pleiades" zip
+
+progenv-git-zip: git
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-git" zip
+
+progenv-mingw-git-zip: mingw git
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-mingw-git" zip
+
+progenv-java-git-zip: java git
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-java-git" zip
+
+progenv-pleiades-git-zip: pleiades git
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-pleiades-git" zip
 
 ########################################################################
 
