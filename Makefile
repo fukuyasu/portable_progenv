@@ -20,6 +20,9 @@ CL_VERSION = 2.0
 #       +- work : ${WORK_DIR} 
 #       +- progenv command-line.lnk
 #       +- clinit.bat
+#   tmp : ${TMP_DIR}
+#   ../distfiles : ${DIST_DIR}
+#   ../release : ${RELEASE_DIR}
 #
 
 BASE_DIR = progenv
@@ -32,6 +35,8 @@ CLINIT_SRC = clinit.src
 CLINIT_BAT = clinit.bat
 
 WIN_PATH_SEP = \\
+
+TMP_DIR = tmp
 
 ########################################################################
 
@@ -108,6 +113,9 @@ ${BASE_DIR}/${CL_LNK}: ${CL_SRC}
 	${MAKE} ${MAKE_FLAGS} ${BASE_DIR}
 	${CP} ${CL_SRC} ${BASE_DIR}
 
+${TMP_DIR}:
+	${MKDIR} ${TMP_DIR}
+
 ########################################################################
 
 include *.mk
@@ -121,3 +129,6 @@ clean::
 clean::
 	${RM} -R ${BASE_DIR}/${WORK_DIR}
 	${RM} -R ${BASE_DIR}
+
+clean::
+	${RM} -R ${TMP_DIR}
