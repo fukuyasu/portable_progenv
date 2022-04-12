@@ -68,10 +68,12 @@ SHELL    = /bin/sh
 
 ########################################################################
 
-all: cl mingw java
+all: cl mingw java eclipse pleiades
 
 progenv-zip-all:
 	${MAKE} ${MAKE_FLAGS} clean progenv-java-zip
+	# ${MAKE} ${MAKE_FLAGS} clean	# pleiades = java + eclipse + pleiades
+	${MAKE} ${MAKE_FLAGS} progenv-pleiades-zip
 	${MAKE} ${MAKE_FLAGS} clean progenv-mingw-zip
 	# ${MAKE} ${MAKE_FLAGS} clean	# all = mingw + java
 	${MAKE} ${MAKE_FLAGS} progenv-zip
@@ -88,6 +90,9 @@ progenv-mingw-zip: mingw
 
 progenv-java-zip: java
 	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-java" zip
+
+progenv-pleiades-zip: pleiades
+	${MAKE} ${MAKE_FLAGS} VERSION="${VERSION}-pleiades" zip
 
 ########################################################################
 
