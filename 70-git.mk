@@ -18,7 +18,7 @@ CLINIT_GIT_BAT = clinit-70-git.bat
 
 ########################################################################
 
-GIT_VERSION = 2.35.1.2
+GIT_VERSION = 2.40.0
 MINGIT_ZIP = ${DIST_DIR}/MinGit-${GIT_VERSION}-busybox-64-bit.zip
 
 ########################################################################
