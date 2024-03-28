@@ -10,7 +10,7 @@ JDK
 
 Eclipse/Pleiades
 - Eclipse: https://www.eclipse.org/downloads/packages/
-- Pleiades: https://mergedoc.osdn.jp/
+- Pleiades: https://willbrains.jp/
 
 Git for Windows
 - Git: https://git-scm.com/
