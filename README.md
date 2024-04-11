@@ -25,8 +25,9 @@ X.YpZ
 リリース
 | バージョン | リリース日 | GCC | JDK | Eclipse | Pleiades | Git for Windows |
 |:----|:-----------|:------|:---------|:----------|:-----------|:---------|
-| 4.0 | 2022/04/12 | 8.1.0 | 17.0.2_8 | 2022-03 R | 2022.03.26 | 2.35.1.2 |
-| 4.0.1 | 2023/04/11 | 8.1.0 | 17.0.6_10 | 2023-03 R | 2023.03.15 | 2.40.0 |
+| 4.0 | 2022/04/12 | 8.1.0 | 17.0.2+8 | 2022-03 R | 2022.03.26 | 2.35.1.2 |
+| 4.0.1 | 2023/04/11 | 8.1.0 | 17.0.6+10 | 2023-03 R | 2023.03.15 | 2.40.0 |
+| 4.0.2 | 2024/04/11 | 8.1.0 | 17.0.10+7 | 2024-03 R | 2024.03.25 | 2.44.0 |
 
 ## ディレクトリ構成
 ```
@@ -41,10 +42,10 @@ portable_progenv/
    +-- tmp/                （作業用ディレクトリ）
 distfiles/    （ダウンロードファイル - 構築ルールから使用）
    +-- x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
-   +-- OpenJDK17U-jdk_x64_windows_hotspot_17.0.6_10.zip
-   +-- eclipse-java-2023-03-R-win32-x86_64.zip
-   +-- pleiades-win-2023.03.15.zip
-   +-- MinGit-2.40.0-busybox-64-bit.zip
+   +-- OpenJDK17U-jdk_x64_windows_hotspot_17.0.x_y.zip
+   +-- eclipse-java-x-y-R-win32-x86_64.zip
+   +-- pleiades-win-x.y.z.zip
+   +-- MinGit-2.x.y-busybox-64-bit.zip
 release/
    +-- progenv-X.YpZ.yyyymmdd.zip
    +-- progenv-X.YpZ-xxxxx.yyyymmdd.zip

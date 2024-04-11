@@ -7,7 +7,7 @@ PROJECT = progenv
 # Project Title
 TITLE   = ProGENv: Portable Programming Environment
 # Project ver. num.
-VERSION = 4.0.2-rc1
+VERSION = 4.0.2
 
 # Command-Line ver. num.
 CL_VERSION = 2.0
