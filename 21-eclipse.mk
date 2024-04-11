@@ -18,7 +18,7 @@ ECLIPSE_WORKSPACE = workspace
 
 ########################################################################
 
-ECLIPSE_VERSION = 2023-03-R
+ECLIPSE_VERSION = 2024-03-R
 ECLIPSE_ZIP = ${DIST_DIR}/eclipse-java-${ECLIPSE_VERSION}-win32-x86_64.zip
 ECLIPSE_CONFIG_SCRIPT = eclipseconf.sh
 

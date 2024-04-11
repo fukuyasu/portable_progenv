@@ -19,7 +19,7 @@ PLEIADES_DIR = pleiades
 
 ########################################################################
 
-PLEIADES_VERSION = 2023.03.15
+PLEIADES_VERSION = 2024.03.25
 PLEIADES_ZIP = ${DIST_DIR}/pleiades-win-${PLEIADES_VERSION}.zip
 
 ########################################################################
