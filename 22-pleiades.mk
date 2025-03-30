@@ -8,7 +8,7 @@
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
 #       +- java : ${JAVA_DIR}
-#       |    +-- 17 : ${JAVA_MAJOR}
+#       |    +-- 21 : ${JAVA_MAJOR}
 #       +- eclipse : ${ECLIPSE_DIR}
 #       +- workspace : ${ECLIPSE_WORKSPACE}
 #   ${TMP_DIR}
@@ -19,8 +19,10 @@ PLEIADES_DIR = pleiades
 
 ########################################################################
 
-PLEIADES_VERSION = 2024.03.25
+PLEIADES_VERSION = 2025.03.20
 PLEIADES_ZIP = ${DIST_DIR}/pleiades-win-${PLEIADES_VERSION}.zip
+# Download from https://willbrains.jp/
+# https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/build/stable/pleiades-win.zip
 
 ########################################################################
 
