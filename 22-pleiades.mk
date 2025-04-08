@@ -19,7 +19,8 @@ PLEIADES_DIR = pleiades
 
 ########################################################################
 
-PLEIADES_VERSION = 2025.03.20
+PLEIADES_VERSION = 2025.06.20
+# 2025.03.20???
 PLEIADES_ZIP = ${DIST_DIR}/pleiades-win-${PLEIADES_VERSION}.zip
 # Download from https://willbrains.jp/
 # https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/build/stable/pleiades-win.zip
