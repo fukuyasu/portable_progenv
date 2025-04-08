@@ -8,7 +8,7 @@
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
 #       +- java : ${JAVA_DIR}
-#       |    +-- 17 : ${JAVA_MAJOR}
+#       |    +-- 21 : ${JAVA_MAJOR}
 #       +- clinit-20-java.bat
 #
 
@@ -19,16 +19,17 @@ CLINIT_JAVA_BAT = clinit-20-java.bat
 
 ########################################################################
 
-JAVA_MAJOR = 17
-JAVA_MINOR = ${JAVA17_MINOR}
-JAVA_PATCH = ${JAVA17_PATCH}
-JAVA_VERSION = ${JAVA17_VERSION}
-JAVA_ZIP = ${JAVA17_ZIP}
+JAVA_MAJOR = 21
+JAVA_MINOR = ${JAVA21_MINOR}
+JAVA_PATCH = ${JAVA21_PATCH}
+JAVA_VERSION = ${JAVA21_VERSION}
+JAVA_ZIP = ${JAVA21_ZIP}
 
-JAVA17_MINOR = 0.10
-JAVA17_PATCH = 7
-JAVA17_VERSION = -17.${JAVA17_MINOR}+${JAVA17_PATCH}
-JAVA17_ZIP = ${DIST_DIR}/OpenJDK17U-jdk_x64_windows_hotspot_17.${JAVA17_MINOR}_${JAVA17_PATCH}.zip
+JAVA21_MINOR = 0.6
+JAVA21_PATCH = 7
+JAVA21_VERSION = -21.${JAVA21_MINOR}+${JAVA21_PATCH}
+JAVA21_ZIP = ${DIST_DIR}/OpenJDK21U-jdk_x64_windows_hotspot_21.${JAVA21_MINOR}_${JAVA21_PATCH}.zip
+# Download from https://adoptium.net/temurin/releases/?os=windows&arch=x64&package=jdk
 
 ########################################################################
 

@@ -8,7 +8,7 @@
 # ファイル／ディレクトリ構造
 #   ${BASE_DIR}
 #       +- java : ${JAVA_DIR}
-#       |    +-- 17 : ${JAVA_MAJOR}
+#       |    +-- 21 : ${JAVA_MAJOR}
 #       +- eclipse : ${ECLIPSE_DIR}
 #       +- workspace : ${ECLIPSE_WORKSPACE}
 #
@@ -18,8 +18,9 @@ ECLIPSE_WORKSPACE = workspace
 
 ########################################################################
 
-ECLIPSE_VERSION = 2024-03-R
+ECLIPSE_VERSION = 2025-03-R
 ECLIPSE_ZIP = ${DIST_DIR}/eclipse-java-${ECLIPSE_VERSION}-win32-x86_64.zip
+# Download from https://www.eclipse.org/downloads/packages/
 ECLIPSE_CONFIG_SCRIPT = eclipseconf.sh
 
 ########################################################################

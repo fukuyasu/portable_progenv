@@ -18,13 +18,15 @@ CLINIT_MINGW_BAT = clinit-10-mingw.bat
 
 ########################################################################
 
-MINGW_VERSION = 8.1.0
-MINGW_THREADS = posix
+MINGW_VERSION = 14.2.0
+MINGW_THREADS = win32
 MINGW_EXCEPTION = seh
-MINGW_REVISION = 0
-MINGW_ZIP = ${DIST_DIR}/x86_64-${MINGW_VERSION}-release-${MINGW_THREADS}-${MINGW_EXCEPTION}-rt_v6-rev${MINGW_REVISION}.7z
-# Download from https://sourceforge.net/projects/mingw-w64/files/
-# https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/
+MINGW_CRT = ucrt
+MINGW_RT = rt_v12
+MINGW_REVISION = 2
+MINGW_ZIP = ${DIST_DIR}/x86_64-${MINGW_VERSION}-release-${MINGW_THREADS}-${MINGW_EXCEPTION}-${MINGW_CRT}-${MINGW_RT}-rev${MINGW_REVISION}.7z
+# Download from https://github.com/niXman/mingw-builds-binaries/releases
+# https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev2/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev2.7z
 
 ########################################################################
 
