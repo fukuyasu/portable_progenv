@@ -18,7 +18,7 @@ CLINIT_GIT_BAT = clinit-70-git.bat
 
 ########################################################################
 
-GIT_VERSION = 2.49.0
+GIT_VERSION = 2.53.0.2
 MINGIT_ZIP = ${DIST_DIR}/MinGit-${GIT_VERSION}-busybox-64-bit.zip
 # Download from https://github.com/git-for-windows/git/releases/
 # https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/MinGit-2.49.0-busybox-64-bit.zip
