@@ -19,16 +19,16 @@ CLINIT_JAVA_BAT = clinit-20-java.bat
 
 ########################################################################
 
-JAVA_MAJOR = 21
-JAVA_MINOR = ${JAVA21_MINOR}
-JAVA_PATCH = ${JAVA21_PATCH}
-JAVA_VERSION = ${JAVA21_VERSION}
-JAVA_ZIP = ${JAVA21_ZIP}
+JAVA_MAJOR = 25
+JAVA_MINOR = ${JAVA25_MINOR}
+JAVA_PATCH = ${JAVA25_PATCH}
+JAVA_VERSION = ${JAVA25_VERSION}
+JAVA_ZIP = ${JAVA25_ZIP}
 
-JAVA21_MINOR = 0.10
-JAVA21_PATCH = 7
-JAVA21_VERSION = -21.${JAVA21_MINOR}+${JAVA21_PATCH}
-JAVA21_ZIP = ${DIST_DIR}/OpenJDK21U-jdk_x64_windows_hotspot_21.${JAVA21_MINOR}_${JAVA21_PATCH}.zip
+JAVA25_MINOR = 0.3
+JAVA25_PATCH = 9
+JAVA25_VERSION = -25.${JAVA25_MINOR}+${JAVA25_PATCH}
+JAVA25_ZIP = ${DIST_DIR}/OpenJDK25U-jdk_x64_windows_hotspot_25.${JAVA25_MINOR}_${JAVA25_PATCH}.zip
 # Download from https://adoptium.net/temurin/releases/?os=windows&arch=x64&package=jdk
 
 ########################################################################
